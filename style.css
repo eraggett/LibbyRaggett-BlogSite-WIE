@@ -1,0 +1,878 @@
+@charset "UTF-8";
+/*
+Theme Name: Libby Raggett Blog Site
+Theme URL: http://annarbordesigns.com/wp2/
+Author: Libby Raggett
+Description: Blog Site  for WIE course
+Version: 0.1
+License: Open
+Text Domain: Libby_Raggett_blog_Site
+*/
+
+
+@import url("css/normalize.css");
+@import url("css/skeleton.css");
+
+/* GENERAL STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+body {
+  background: #f8f4ec;
+  font-family: 'Lucida Sans Unicode', 'Arial', serif;
+  color: white;
+}
+
+h1, h3, h4, header .btn {
+	font-weight: 700;
+	margin-right: 14px;
+	letter-spacing: normal;
+	font-size: medium;
+}
+
+h1 {
+  margin: 100px 0 20px;
+  text-transform: uppercase;
+  font-size: 2.6rem;
+}
+
+h3 {
+	margin-bottom: 6px;
+	font-size: 2.3rem;
+	text-align: left;
+}
+
+h4 {
+  font-size: 2rem;
+}
+
+h3:after {
+	content: '';
+	display: block;
+	width: 10%;
+	padding-top: 0px;
+	border-bottom: 3px solid whitesmoke;
+	font-style: normal;
+	font-size: 14pt;
+}
+
+h1 + h4 {
+	font-weight: normal;
+	text-align: center;
+}
+
+a {
+  text-align: left;
+  outline: none;
+  display: inline-block;
+  text-decoration: none;
+  font-size: 16px;
+  color: #818181;
+  letter-spacing:1px;
+  -webkit-transition: all ease .3s;
+          transition: all ease .3s;
+}
+
+.btn {
+  font-size: 1.2em;
+  border-radius: 5px;
+  padding: 12px 30px;
+}
+
+.block {
+  width: 130px;
+  margin: 0 auto;
+  display: block;
+}
+
+
+p{
+	font-size: 14px;
+	font-family: 'alice', sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	color: rgba(146,146,146,1.00);
+	line-height: 1.8;
+}
+
+
+
+
+@charset "utf-8";
+/* Simple fluid media
+   Note: Fluid media requires that you remove the media's height and width attributes from the HTML
+   http://www.alistapart.com/articles/fluid-images/ 
+*/
+img, object, embed, video {
+	max-width: 100%;
+}
+/* IE 6 does not support max-width so default to width 100% */
+.ie6 img {
+	width: 100%;
+}
+/*
+	Dreamweaver Fluid Grid Properties
+	----------------------------------
+	dw-num-cols-mobile:		12;
+	dw-num-cols-tablet:		12;
+	dw-num-cols-desktop:	12;
+	dw-gutter-percentage:	25;
+	
+	Inspiration from "Responsive Web Design" by Ethan Marcotte 
+	http://www.alistapart.com/articles/responsive-web-design
+	
+	and Golden Grid System by Joni Korpi
+	http://goldengridsystem.com/
+*/
+
+/* Fluid Styles */
+.fluid {
+	clear: both;
+	margin-left: 0;
+	width: 100%;
+	float: left;
+	display: block;
+}
+.fluidList {
+	list-style: none;
+	list-style-image: none;
+	margin: 0;
+	padding: 0;
+}
+/* Mobile Layout: 480px and below. */
+  
+.gridContainer {
+	margin-left: auto;
+	margin-right: auto;
+	width: 86.45%;
+	padding-left: 2.275%;
+	padding-right: 2.275%;
+	clear: none;
+	float: none;
+}
+
+/* Header & HERO styles*/
+.heroHeader {
+}
+.logo {
+	width: 100%;
+}
+/* Navigation Bar styles */
+.topNav {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+}
+.topNavUl {
+	position: static;
+	width: 100%;
+	margin-left: 0;
+}
+.topNavLI {
+	width: 32.2033%;
+	clear: none;
+	height: auto;
+	position: static;
+}
+
+/* Main heading styles*/
+
+.mainHeading {
+}
+.mainTagline {
+}
+
+/* Text & Content areas styles */
+.textContainer {
+    padding-top:20px;
+}
+#sectionOne {
+	width: 80%;
+	margin-left: 8.4745%;
+}
+#sectionTwo {
+	width: 80%;
+	margin-left: 0;
+	clear: both;
+	display: none;
+}
+#sectionThree {
+	padding-left: 80px;
+	padding-right: 80px;
+	width: 72%;
+}
+
+.secondarySection {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+}
+.secondaryHeading {
+	width: 100%;
+	margin-left: 0;
+}
+
+/*.contentArea{
+    width: 80%;
+    margin-left: 10%;
+    margin-top: 0;
+    margin-bottom: 5%;
+}*/
+
+.tiles {
+	width: 83.0508%;
+	margin-left: 8.4745%;
+	clear: both;
+	display: block;
+    padding-bottom: 10px;
+}
+.tiles:hover {
+	opacity: 0.6;
+    cursor: pointer;
+}
+/* Footer styles*/
+.no-js body footer{
+	padding: 10px;
+	
+}
+.footerSection {
+	width: 100%;
+	margin-left: 0;
+	clear: both;
+}
+.footerTitle {
+	text-align: center;
+	width: 100%;
+	margin-left: 0;
+    margin-top:20px;
+}
+
+.gallery {
+}
+.showAreaH2 {
+}
+.zeroMargin_mobile {
+margin-left: 0;
+}
+.hide_mobile {
+display: none;
+}
+
+/* Tablet Layout: 481px to 768px. Inherits styles from: Mobile Layout. */
+
+@media only screen and (min-width: 481px) {
+.gridContainer {
+	width: 90.675%;
+	padding-left: 1.1625%;
+	padding-right: 1.1625%;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+/* Header & HERO styles*/
+.heroHeader {
+}
+.logo {
+	width: 15.2542%;
+}
+/* Navigation styles*/
+.topNav {
+	clear: none;
+	width: 49.1525%;
+    margin-left: 35.5932%;
+}
+.topNavUl {
+	position: static;
+	width: 100%;
+	margin-left: 0;
+}
+.topNavLI {
+	clear: none;
+	width: 31.0344%;
+	height: auto;
+	position: static;
+	margin-left: 3.4482%;
+}
+
+/* Main heading styles*/
+.mainHeading {
+}
+.mainTagline {
+}
+
+/* Text & content area styles*/
+.textContainer {
+    padding-top: 20px;
+}
+#sectionOne {
+	width: 40.6779%;
+    margin-left: 5.4745%;
+	display: block;
+}
+#sectionTwo {
+	clear: none;
+	width: 40.6779%;
+    margin-left: 8.4745%;
+	display: block;
+}
+.tiles {
+	clear: none;
+	width: 49.1525%;
+	margin-left: 1.6949%;
+	display: block;
+    padding-bottom: 10px;
+}
+.secondarySection {
+	clear: none;
+	width: 49.1525%;
+	margin-left: 1.6949%;
+	display: block;
+}
+.secondaryHeading {
+	width: 100%;
+	margin-left: 0;
+}
+/* Footer styles*/
+.footer {
+}
+.footerSection {
+	clear: none;
+	width: 32.2033%;
+	margin-left: 1.6949%;
+	display: block;
+}
+.footerTitle {
+     margin-top: 20%;
+}
+.gallery {
+}
+.showAreaH2 {
+}
+.hide_tablet {
+display: none;
+}
+.zeroMargin_tablet {
+margin-left: 0;
+}
+}
+
+/* Desktop Layout: 769px to a max of 1232px.  Inherits styles from: Mobile Layout and Tablet Layout. */
+
+@media only screen and (min-width: 769px) {
+.gridContainer {
+	width: 88.5%;
+	max-width: 1232px;
+	padding-left: 0.75%;
+	padding-right: 0.75%;
+	margin: auto;
+	clear: none;
+	float: none;
+	margin-left: auto;
+}
+/* Header & HERO styles*/
+.heroHeader {
+}
+.logo {
+	width: 15.2542%;
+}
+/* Navigation styles*/
+.topNav {
+	width: 23.7288%;
+	clear: none;
+	margin-left: 52.5423%;
+}
+.topNavUl {
+	width: 100%;
+	margin-left: 0;
+	position: static;
+}
+.topNavLI {
+	width: auto;
+	clear: none;
+	height: auto;
+	position: static;
+	list-style-type: none;
+	margin: 5%;
+}
+
+
+/* Text & content area styles*/
+.textContainer {
+    padding-top:60px;
+    padding-bottom:30px;
+}
+.fluid.postContainer , .fluid.postContainer  {
+	margin-bottom: 10px;
+}
+#sectionOne {
+	width: 40.6779%;
+	margin-left: 8.4745%;
+}
+#sectionTwo {
+	width: 40.6779%;
+	margin-left: 1.6949%;
+	clear: none;
+	display: block;
+}
+.secondarySection {
+	width: 49.1525%;
+	clear: none;
+	margin-left: 1.6949%;
+	display: block;
+}
+.secondaryHeading {
+	margin-left: 0;
+	width: 100%;
+}
+
+/* Gallery styles*/
+.tiles {
+	width: 32.2033%;
+	clear: none;
+	margin-left: 1.6949%;
+	display: block;
+    padding-bottom: 60px;
+}
+/* Footer styles*/
+
+.footerSection {
+	width: 32.2033%;
+	clear: none;
+	margin-left: 1.6949%;
+	display: block;
+}
+.footerTitle {
+	margin-left: 0;
+	width: 100%;
+    margin-top: 5%;
+}
+.gallery {
+}
+.showAreaH2 {
+}
+.zeroMargin_desktop {
+margin-left: 0;
+}
+.hide_desktop {
+display: none;
+}
+}
+
+
+/* HEADER STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+header .btn {
+  text-transform: uppercase;
+}
+
+header a:hover, .about a:hover {
+	text-align: center;
+}
+
+header .btn, .services {
+  margin-top: 100px;
+}
+
+header {
+	padding-top: 0px;
+	padding-right: 0;
+	padding-left: 0;
+	padding-bottom: 1px;
+	text-align: center;
+}
+
+.about, .contact {
+  padding: 150px 0;
+}
+
+header {
+	text-align: center;
+	background-color: #F8F4EC;
+}
+
+nav ul, .contact ul {
+  list-style: none;
+  font-size: 0;
+}
+
+nav li, .contact li {
+	margin-bottom: 0;
+	display: inline-block;
+	padding: auto;}
+body .fluid.hero.heroHeader2 .fluid.banner {
+	margin-top: 38px;
+}
+
+
+
+
+
+
+/* Header & HERO styles*/
+.logo {
+	text-align: center;
+    padding-top:20px;
+    padding-bottom: 20px;
+}
+.heroHeader {
+	height: 450px;
+	background-color: rgba(208,207,207,1.00);
+}
+
+
+.mainTagline {
+	text-align: center;
+	color: rgba(255,255,255,1.00);
+	font-size: 16px;
+	margin-top: -1%;
+}
+
+
+
+/* Gallery styles */
+.gallery{
+    padding-top:20px;
+    padding-bottom:30px;
+}
+.paraContent{
+	font-size: 14px;
+	font-family: alice, sans-serif;
+	font-style: normal;
+	font-weight: 400;
+	color: rgba(146,146,146,1.00);
+	line-height: 1.8;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.contentArea{
+	font-size: 14px;
+	font-family: alice , sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	color: rgba(146,146,146,1.00);
+	line-height: 1.8;
+	text-align: center;
+	margin-left: 5%;
+	margin-right: 5%;
+}
+.footerTitle p a {
+	margin-top: 4px;
+	padding-top: 35px;
+	color: #FCFCFC;
+}
+
+/* Link styles*/
+a {
+	color: rgba(146,146,146,1.00);
+}
+a:visited {
+	color: rgba(146,146,146,1.00);
+}
+a:hover {
+	color: #848C93;
+	text-align: left;
+}
+.linkStyle {
+	color: rgba(146,146,146,1.00);
+	font-family: 'montserrat', sans-serif;
+	font-style: normal;
+	font-weight: 100;
+	text-decoration: none;
+	text-align: center;
+	
+}
+
+
+.headingStyle {
+	/* [disabled]font-family: 'montserrat', sans-serif; */
+	/* [disabled]font-style: normal; */
+	/* [disabled]font-weight: 400; */
+	color: rgba(146,146,146,1.00);
+	font-size: 32px;
+}
+.mainHeading {
+	color: rgba(255,255,255,1.00);
+	text-align: center;
+	margin-top: 10%;
+	font-size: 60px;
+	background-color: hsla(167,37%,83%,0.55);
+	font-weight: 300;
+	font-family: Gotham, "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-style: normal;
+}
+
+
+
+
+/* ABOUT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.about {
+  color: #969696;
+}
+
+.about .one-third, 
+.about .two-thirds {
+  background: white;
+  background: rgba(255,255,255,.3);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.about .one-third {
+  margin-top: 20px;
+}
+
+.about a {
+  margin-top: 10px;
+}
+
+.about ul {
+  margin-bottom:18px;
+}
+
+.about h3:after, .contact h3:after {
+}
+
+.about .center {
+  text-align: center;
+}
+
+.about .bottom {
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+}
+
+.about .one-third a {
+  margin: 10px auto;
+  width: 50%;
+  display: block;
+} 
+
+.about .two-thirds p:last-child {
+  margin-bottom: 0;
+}
+
+
+
+/* CONTACT STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.contact {
+  color: #969696;
+  text-align: center;
+}
+
+.contact p {
+  margin: 70px 0 0;
+}
+
+.contact ul a {
+  margin-top: 50px;
+  box-shadow: none;
+  background: none;
+  margin-left: 30px;
+}
+
+.contact li:nth-child(1) a {
+  margin-left: 0;
+}
+
+.contact span {
+  font-size: 2em;
+  color: white;
+  -webkit-transition: color ease .4s;
+          transition: color ease .4s;
+}
+
+.contact span:hover {
+  color: steelblue;
+}
+
+.contact .btn-blue {
+  position: relative;
+  margin-top: 30px;
+  color: white;
+  background: steelblue;
+  box-shadow: 0 8px #3b6d97;
+}
+
+.contact .btn-blue:hover {
+  background: #427aa9;
+  color: white;
+}
+
+.contact .btn-blue:after {
+  position: absolute;
+  content: '☃';
+  top: 5px;
+  right: 30px;
+  font-size: 1.6em;
+}
+
+.contact .btn-blue:active {
+  box-shadow: 0 4px #3b6d97;
+  -webkit-transform: translateY(4px);
+      -ms-transform: translateY(4px);
+          transform: translateY(4px);
+}
+
+.contact .creator a {
+    background: none;
+}
+body .fluid.hero.heroHeader a {
+	background-color: #c4e4dd;
+	padding-top: 10px;
+	padding-right: 111px;
+	padding-bottom: 42px;
+	padding-left: 111px;
+	text-align: center;
+	letter-spacing: 7em;
+	border: medium solid #FFFFFF;
+	margin-top: 55px;
+	margin-bottom: 0px;
+}
+a .fluid.logo.textStyle .fluid.mainHeading.headingStyle {
+	text-align: center;
+}
+.fluid.hero.heroHeader a .fluid.logo.textStyle {
+	text-align: center;
+}
+a .fluid.mainHeading.headingStyle .fluid.mainHeading.headingStyle {
+	letter-spacing: 1px;
+}
+a .fluid.mainHeading.headingStyle .fluid.mainHeading.headingStyle2 {
+	letter-spacing: normal;
+}
+
+.no-js body .fluid.hero.heroHeader {
+	text-align: center;
+	background-color: #F6F8EC;
+}
+.fluid.textContainer #sectionOne , .fluid.textContainer #sectionTwo  {
+	
+	width: 35%;
+	margin-right: 15px;
+	padding: 15px;
+	
+	text-align: left;
+}
+
+body .column .fluid.textContainer {
+	background-color: #FCFCFC;
+	width: 100%;
+	margin: auto;
+	
+}
+.fluid.postContainer {
+	background-color: #ECEDE6;	
+	width: 100%;
+	margin: auto;
+	padding: 37px;
+	
+}
+
+.banner {
+	padding-top: 43px;
+	padding-bottom: 43px;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	padding-left: 0px;
+	background-color: #F4F1EE;
+	border-width: medium;
+	border-style: solid;
+	width: 100%;
+}
+.no-js body .topNavUl {
+	width: 100%;
+	margin-top: auto;
+	margin-right: auto;
+	margin-bottom: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+
+
+
+
+/* MEDIA QUERIES STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+@media (min-width: 550px) {
+
+  nav li {
+    width: auto;
+  }
+
+  a {
+  }
+
+  
+
+  nav li:nth-child(2n+1) a:after {
+    content: none;
+  }
+
+  nav li:last-child a {
+    border-right: none;
+  }
+
+  header a:hover, .about a:hover {
+  }
+
+  header a:active, .about a:active {
+    -webkit-transform: translateY(4px);
+        -ms-transform: translateY(4px);
+            transform: translateY(4px);
+  }
+
+  .about .one-third {
+    margin-top: 0;
+  }
+  
+  .about .one-third a {
+    width: 35%;  
+  }
+  
+  .contact .creator a {
+    box-shadow: none;
+  }
+
+}
+
+
+
+@media (min-width: 750px) {
+
+  h1 {
+    font-size: 3.5rem;
+  }
+
+  h3 {
+	font-size: 2.8rem;
+	text-align: left;
+  }
+
+  h4 {
+    font-size: 2.4rem;
+  }
+
+  .services a:hover {
+    box-shadow: 0 -8px white;
+    -webkit-transform: scale(1.15);
+        -ms-transform: scale(1.15);
+            transform: scale(1.15);
+  }
+  
+  .contact ul a {
+    margin-left: 45px;
+  }
+
+  .contact ul span {
+    font-size: 3em;
+  }
+
+}/* CSS Document */
